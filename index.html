@@ -4,6 +4,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>AI Image Generation | JavaScript Project</title>
+    <meta
+      name="description"
+      content="An AI-powered image generation tool built with HTML, CSS, and JavaScript. Enter a text prompt and instantly create stunning visuals."
+    />
+    <meta
+      name="keywords"
+      content="AI, Image Generator, JavaScript, Stable Diffusion, Hugging Face, HTML, CSS"
+    />
+    <meta name="author" content="Tayyaba" />
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
@@ -18,7 +28,7 @@
           <div class="logo">
             <i class="fa-solid fa-wand-magic-sparkles"></i>
           </div>
-          <h1>AI Image Genertaor</h1>
+          <h1>AI Image Generator</h1>
         </div>
         <button class="theme-toggle">
           <i class="fa-solid fa-moon"></i>
@@ -34,7 +44,7 @@
               required
               autofocus
             ></textarea>
-            <button type="button " class="prompt-btn">
+            <button type="button" class="prompt-btn">
               <i class="fa-solid fa-dice"></i>
             </button>
           </div>
@@ -45,16 +55,19 @@
               <select class="custom-select" id="model-select" required>
                 <option value="" selected disabled>Select Model</option>
                 <option value="black-forest-labs/FLUX.1-dev">FLUX.1-dev</option>
-                <option value="black-forest-labs/FLUX.1-schnell">
-                  FLUX.1-schnell
+                <option value="CompVis/stable-diffusion-v1-4">
+                  Stable Diffusion v1-4
                 </option>
+                <option value="Kwai-Kolors/Kolors">FLUX.1-schnell</option>
                 <option value="stabilityai/stable-diffusion-xl-base-1.0">
                   Stable Diffusion XL
                 </option>
-                <option value="runwayml/stable-diffusion-v1-5">
-                  Stable Diffusion v1.5
+                <option value="stabilityai/stable-diffusion-3-medium-diffusers">
+                  Stable Diffusion v1-5
                 </option>
-                <option value="prompthero/openjourney">Openjourney</option>
+                <option value="latent-consistency/lcm-lora-sdxl">
+                  Image Lightning
+                </option>
               </select>
             </div>
             <div class="select-wrapper">
@@ -77,66 +90,12 @@
 
             <button type="submit" class="gen-btn">
               <i class="fa-solid fa-wand-sparkles"></i>
-              Gererate
+              Generate
             </button>
           </div>
 
           <!-- //Gallery grid -->
-          <div class="gallery-grid">
-            <div class="img-card loading">
-              <div class="status-container">
-                <div class="spinner"></div>
-                <i class="fa-solid fa-triangle-exclamation"></i>
-                <p class="status-text">Generating...</p>
-              </div>
-              <img
-                src="https://media.istockphoto.com/id/1322104312/photo/freedom-chains-that-transform-into-birds-charge-concept.jpg?s=612x612&w=0&k=20&c=e2XUx498GotTLJn_62tPmsqj6vU48ZEkf0auXi6Ywh0="
-                alt="gallery img"
-                class="result-img"
-              />
-              <div class="img-overlay">
-                <button class="img-download-btn">
-                  <i class="fa-solid fa-download"></i>
-                </button>
-              </div>
-            </div>
-            <div class="img-card">
-              <img
-                src="https://media.istockphoto.com/id/1322104312/photo/freedom-chains-that-transform-into-birds-charge-concept.jpg?s=612x612&w=0&k=20&c=e2XUx498GotTLJn_62tPmsqj6vU48ZEkf0auXi6Ywh0="
-                alt="gallery img"
-                class="result-img"
-              />
-              <div class="img-overlay">
-                <button class="img-download-btn">
-                  <i class="fa-solid fa-download"></i>
-                </button>
-              </div>
-            </div>
-            <div class="img-card">
-              <img
-                src="https://media.istockphoto.com/id/1322104312/photo/freedom-chains-that-transform-into-birds-charge-concept.jpg?s=612x612&w=0&k=20&c=e2XUx498GotTLJn_62tPmsqj6vU48ZEkf0auXi6Ywh0="
-                alt="gallery img"
-                class="result-img"
-              />
-              <div class="img-overlay">
-                <button class="img-download-btn">
-                  <i class="fa-solid fa-download"></i>
-                </button>
-              </div>
-            </div>
-            <div class="img-card">
-              <img
-                src="https://media.istockphoto.com/id/1322104312/photo/freedom-chains-that-transform-into-birds-charge-concept.jpg?s=612x612&w=0&k=20&c=e2XUx498GotTLJn_62tPmsqj6vU48ZEkf0auXi6Ywh0="
-                alt="gallery img"
-                class="result-img"
-              />
-              <div class="img-overlay">
-                <button class="img-download-btn">
-                  <i class="fa-solid fa-download"></i>
-                </button>
-              </div>
-            </div>
-          </div>
+          <div class="gallery-grid"></div>
         </form>
       </main>
     </div>
