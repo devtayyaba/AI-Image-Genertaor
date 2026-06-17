@@ -20,6 +20,7 @@ This is a clean and responsive web application built using HTML, CSS, and Vanill
 1. **Clone or Download the Project:**
    ```bash
    git clone https://github.com/devtayyaba/AI-Image-Generator.git
+   
    ```
    
 
@@ -27,7 +28,7 @@ This is a clean and responsive web application built using HTML, CSS, and Vanill
 2. **Add Your API Key:**
 Open the `script.js` file and replace `"YOUR_API_KEY_HERE"` with your actual Hugging Face API token:
 ```javascript
-const API_KEY = "your_actual_hugging_face_token_here";
+   const API_KEY = "your_actual_hugging_face_token_here";
 
 ```
 
@@ -40,5 +41,3 @@ Simply double-click the `index.html` file to open it in any web browser, or run 
 ## 🧑‍💻 Author
 
 **Tayyaba Nadeem** *Computer Science Student & Developer* Building practical web applications and exploring AI automation systems.
-
-```
