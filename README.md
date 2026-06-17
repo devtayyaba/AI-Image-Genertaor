@@ -2,7 +2,6 @@
 
 This is a clean and responsive web application built using HTML, CSS, and Vanilla JavaScript. It directly connects to the **Hugging Face API** to generate high-quality images based on any text description (prompt) entered by the user.
 
----
 
 ## 🚀 Features
 
